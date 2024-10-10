@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Doctype declaration and language settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Document Title -->
+    <title>HTML5 Practice - Chapter 10: Metadata</title>
+
+    <!-- Metadata for SEO and Page Information -->
+    <meta name="description" content="HTML5 Practice for Chapter 10 on Metadata, covering all metadata tags.">
+    <meta name="keywords" content="HTML5, Metadata, Practice, Tags, Web Development">
+    <meta name="author" content="Your Name">
+    <meta name="robots" content="index, follow">
+    <meta name="rating" content="general">
+
+    <!-- Open Graph Metadata for Social Sharing -->
+    <meta property="og:title" content="HTML5 Practice - Chapter 10: Metadata">
+    <meta property="og:description" content="A comprehensive guide and practice of HTML5 metadata tags.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.example.com/chapter10">
+    <meta property="og:image" content="https://www.example.com/images/og-image.jpg">
+
+    <!-- Twitter Card Metadata -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@YourTwitterHandle">
+    <meta name="twitter:title" content="HTML5 Practice - Chapter 10: Metadata">
+    <meta name="twitter:description" content="A comprehensive guide and practice of HTML5 metadata tags.">
+    <meta name="twitter:image" content="https://www.example.com/images/twitter-image.jpg">
+
+    <!-- Base URL for Relative Links -->
+    <base href="https://www.example.com/">
+
+    <!-- Link to External Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="canonical" href="https://www.example.com/chapter10">
+
+    <!-- Prefetch and Preconnect for Performance Optimization -->
+    <link rel="dns-prefetch" href="//www.example.com">
+    <link rel="preconnect" href="https://www.example.com">
+    <link rel="preload" href="fonts/font.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+    <!-- Specifying Character Set -->
+    <meta charset="UTF-8">
+
+    <!-- Mobile-Specific Meta Tags -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+</head>
+<body>
+
+    <header>
+        <h1>HTML5 Practice - Chapter 10: Metadata</h1>
+        <p>This practice demonstrates the use of metadata in HTML5, covering all the metadata-related tags discussed in Chapter 10.</p>
+    </header>
+
+    <section>
+        <h2>Metadata in the Head Section</h2>
+        <p>Metadata provides information about the document, such as its title, character set, author, and other details. These elements are included in the <code>&lt;head&gt;</code> section and are not displayed on the page itself.</p>
+    </section>
+
+    <section>
+        <h2>Title Tag (<title>)</h2>
+        <p>The <code>&lt;title&gt;</code> tag defines the title of the document, which is displayed on the browser's title bar or tab. It is also important for SEO as search engines use it as the title of the page in search results.</p>
+    </section>
+
+    <section>
+        <h2>Meta Tags</h2>
+        <p>Meta tags provide metadata about the HTML document. They are used to specify page description, keywords, author, viewport settings, and other meta information.</p>
+
+        <ul>
+            <li><code>&lt;meta name="description"&gt;</code>: Describes the content of the page, which is used by search engines.</li>
+            <li><code>&lt;meta name="keywords"&gt;</code>: Specifies keywords for search engines.</li>
+            <li><code>&lt;meta name="author"&gt;</code>: Defines the author of the page.</li>
+            <li><code>&lt;meta name="robots"&gt;</code>: Tells search engines whether to index or follow the page.</li>
+            <li><code>&lt;meta property="og:title"&gt;</code>: Open Graph meta tags are used for social media sharing.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Base Tag (<base>)</h2>
+        <p>The <code>&lt;base&gt;</code> tag specifies the base URL for all relative URLs in the document. This is useful for defining the base path for links, images, or other resources.</p>
+        <p>For example, if the base URL is set to <code>https://www.example.com/</code>, then a relative link like <code>&lt;a href="about"&gt;</code> will resolve to <code>https://www.example.com/about</code>.</p>
+    </section>
+
+    <section>
+        <h2>Link Tag (<link>)</h2>
+        <p>The <code>&lt;link&gt;</code> tag is used to define relationships between the current document and external resources, such as stylesheets, favicons, and preloading resources.</p>
+
+        <ul>
+            <li><code>&lt;link rel="stylesheet" href="styles.css"&gt;</code>: Links an external CSS file for styling.</li>
+            <li><code>&lt;link rel="icon" href="favicon.ico"&gt;</code>: Specifies the favicon for the webpage.</li>
+            <li><code>&lt;link rel="canonical" href="https://www.example.com"&gt;</code>: Specifies the canonical URL for the page, helping to avoid duplicate content issues in SEO.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Open Graph and Twitter Cards</h2>
+        <p>Open Graph and Twitter card meta tags are used to control how content is displayed when shared on social media platforms like Facebook and Twitter. They define the title, description, image, and URL that will appear when the page is shared.</p>
+
+        <ul>
+            <li><code>&lt;meta property="og:title"&gt;</code>: Defines the title for Open Graph sharing.</li>
+            <li><code>&lt;meta property="og:description"&gt;</code>: Defines the description for Open Graph sharing.</li>
+            <li><code>&lt;meta name="twitter:card"&gt;</code>: Defines the type of Twitter card (e.g., summary or summary_large_image).</li>
+            <li><code>&lt;meta name="twitter:image"&gt;</code>: Defines the image for Twitter card sharing.</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Your Name. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

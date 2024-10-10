@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HTML5 Practice for Chapter 9">
+    <meta name="author" content="Your Name">
+    <title>HTML5 Practice - Chapter 9: Extra Markup</title>
+</head>
+<body>
+
+    <header>
+        <h1>HTML5 Practice - Chapter 9: Extra Markup</h1>
+        <p>This practice demonstrates the use of extra markup tags in HTML5, covering all the tags discussed in Chapter 9.</p>
+    </header>
+
+    <section>
+        <h2>Using Comments in HTML</h2>
+        <p>Comments are useful for leaving notes in the HTML code. They are not visible on the web page but help developers understand the structure of the code.</p>
+        <!-- This is a comment. It will not appear on the web page -->
+    </section>
+
+    <section>
+        <h2>Doctype Declaration (<code>&lt;!DOCTYPE&gt;</code>)</h2>
+        <p>The <code>&lt;!DOCTYPE&gt;</code> declaration is required at the beginning of every HTML document. It informs the browser about the document type and version of HTML.</p>
+        <p>For example, the HTML5 doctype looks like this:</p>
+        <pre><code>&lt;!DOCTYPE html&gt;</code></pre>
+    </section>
+
+    <section>
+        <h2>Article Element (<article>)</h2>
+        <article>
+            <h3>Understanding HTML5 Extra Markup</h3>
+            <p>The <code>&lt;article&gt;</code> tag defines a self-contained piece of content, such as a blog post or news article. It can be reused or independently distributed.</p>
+        </article>
+    </section>
+
+    <section>
+        <h2>Aside Element (<aside>)</h2>
+        <aside>
+            <h3>Related Information</h3>
+            <p>The <code>&lt;aside&gt;</code> tag represents content related to the main content but separate from it, such as a sidebar or related links.</p>
+        </aside>
+    </section>
+
+    <section>
+        <h2>Using &lt;div&gt; and &lt;span&gt;</h2>
+        <p><code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> are commonly used to group elements for styling purposes. <code>&lt;div&gt;</code> is a block-level element, while <code>&lt;span&gt;</code> is an inline element.</p>
+        
+        <div style="border: 1px solid black; padding: 10px;">
+            <h3>Example of a &lt;div&gt;</h3>
+            <p>This text is inside a <code>&lt;div&gt;</code> element. <span style="color: red;">This text inside a <code>&lt;span&gt;</code> is red</span>, but it is inline with the rest of the paragraph.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Embedding Multimedia with &lt;object&gt; and &lt;embed&gt;</h2>
+        <p>The <code>&lt;object&gt;</code> and <code>&lt;embed&gt;</code> elements are used to embed multimedia and other types of content into a webpage.</p>
+
+        <h3>Using &lt;object&gt;</h3>
+        <object data="https://example.com/sample.pdf" type="application/pdf" width="600" height="400">
+            <p>Your browser does not support embedded PDF files. <a href="https://example.com/sample.pdf">Download the file here</a>.</p>
+        </object>
+
+        <h3>Using &lt;embed&gt;</h3>
+        <embed src="https://www.example.com/sample-video.mp4" width="600" height="400" type="video/mp4">
+    </section>
+
+    <section>
+        <h2>Using &lt;iframe&gt;</h2>
+        <p>The <code>&lt;iframe&gt;</code> element is used to embed an external webpage or content inside the current page.</p>
+        <iframe src="https://www.example.com" width="600" height="400" title="Example Iframe"></iframe>
+    </section>
+
+    <section>
+        <h2>Parameter Element (<param>)</h2>
+        <p>The <code>&lt;param&gt;</code> element is used within the <code>&lt;object&gt;</code> tag to define parameters for the embedded object.</p>
+        <object data="movie.swf" type="application/x-shockwave-flash" width="400" height="300">
+            <param name="autoplay" value="true">
+            <p>Your browser does not support Flash content. <a href="movie.swf">Download the Flash file</a>.</p>
+        </object>
+    </section>
+
+    <section>
+        <h2>Progress Element (<progress>)</h2>
+        <p>The <code>&lt;progress&gt;</code> element is used to display the progress of a task, such as file uploading or downloading.</p>
+        <progress value="60" max="100">60%</progress>
+    </section>
+
+    <section>
+        <h2>Meter Element (<meter>)</h2>
+        <p>The <code>&lt;meter&gt;</code> element represents a scalar measurement within a known range, such as a gauge or meter.</p>
+        <meter value="0.6" min="0" max="1">60%</meter>
+    </section>
+
+    <section>
+        <h2>Template Element (<template>)</h2>
+        <p>The <code>&lt;template&gt;</code> element holds content that is not rendered when the page loads but can be instantiated later using JavaScript.</p>
+        <template id="templateExample">
+            <p>This is template content that will be rendered later.</p>
+        </template>
+        <button id="showTemplate">Show Template Content</button>
+        <div id="templateContainer"></div>
+
+        <script>
+            document.getElementById('showTemplate').addEventListener('click', function() {
+                var template = document.getElementById('templateExample');
+                var container = document.getElementById('templateContainer');
+                var clone = document.importNode(template.content, true);
+                container.appendChild(clone);
+            });
+        </script>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Your Name. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HTML5 Practice for Chapter 6">
+    <meta name="author" content="Your Name">
+    <title>HTML5 Practice - Chapter 6: Tables</title>
+</head>
+<body>
+
+    <header>
+        <h1>HTML5 Practice - Chapter 6: Tables</h1>
+        <p>This practice demonstrates the use of tables in HTML5, covering all the table-related tags discussed in Chapter 6.</p>
+    </header>
+
+    <section>
+        <h2>Basic Table Structure</h2>
+        <p>A table in HTML is created using the <code>&lt;table&gt;</code> element. Inside the table, rows are defined with the <code>&lt;tr&gt;</code> (table row) element, and cells are defined with the <code>&lt;td&gt;</code> (table data) or <code>&lt;th&gt;</code> (table header) elements.</p>
+        
+        <table border="1">
+            <caption>Basic Table Example</caption>
+            <thead>
+                <tr>
+                    <th>Header 1</th>
+                    <th>Header 2</th>
+                    <th>Header 3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Row 1, Cell 1</td>
+                    <td>Row 1, Cell 2</td>
+                    <td>Row 1, Cell 3</td>
+                </tr>
+                <tr>
+                    <td>Row 2, Cell 1</td>
+                    <td>Row 2, Cell 2</td>
+                    <td>Row 2, Cell 3</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3">Table Footer: Additional Information</td>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
+
+    <section>
+        <h2>Table with Multiple Sections</h2>
+        <p>You can structure a table using the <code>&lt;thead&gt;</code> (table header), <code>&lt;tbody&gt;</code> (table body), and <code>&lt;tfoot&gt;</code> (table footer) elements to improve readability and accessibility.</p>
+        
+        <table border="1">
+            <caption>Table with Thead, Tbody, and Tfoot</caption>
+            <thead>
+                <tr>
+                    <th>Month</th>
+                    <th>Sales</th>
+                    <th>Expenses</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>January</td>
+                    <td>$1000</td>
+                    <td>$500</td>
+                </tr>
+                <tr>
+                    <td>February</td>
+                    <td>$1500</td>
+                    <td>$800</td>
+                </tr>
+                <tr>
+                    <td>March</td>
+                    <td>$2000</td>
+                    <td>$900</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3">Summary for Q1</td>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
+
+    <section>
+        <h2>Spanning Rows and Columns</h2>
+        <p>You can use the <code>colspan</code> and <code>rowspan</code> attributes to make table cells span across multiple columns or rows.</p>
+        
+        <table border="1">
+            <caption>Table with Colspan and Rowspan</caption>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th colspan="2">Contact Information</th>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>John Doe</td>
+                    <td>john@example.com</td>
+                    <td>(555) 555-5555</td>
+                </tr>
+                <tr>
+                    <td>Jane Smith</td>
+                    <td colspan="2">jane@example.com</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">Company XYZ</td>
+                    <td>contact@xyz.com</td>
+                    <td>(123) 456-7890</td>
+                </tr>
+                <tr>
+                    <td>sales@xyz.com</td>
+                    <td>(987) 654-3210</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h2>Column Grouping (<colgroup> and <col>)</h2>
+        <p>The <code>&lt;colgroup&gt;</code> and <code>&lt;col&gt;</code> elements allow you to apply styling or attributes to entire columns in a table.</p>
+        
+        <table border="1">
+            <caption>Table with Column Grouping</caption>
+            <colgroup>
+                <col span="2" style="background-color: #f2f2f2;">
+                <col style="background-color: #e6e6e6;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Location</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Emily Johnson</td>
+                    <td>30</td>
+                    <td>New York</td>
+                </tr>
+                <tr>
+                    <td>Michael Brown</td>
+                    <td>25</td>
+                    <td>Los Angeles</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h2>Accessible Tables with <code>&lt;caption&gt;</code> and <code>&lt;scope&gt;</code></h2>
+        <p>Adding a <code>&lt;caption&gt;</code> to your table provides context to users, especially those using assistive technologies. The <code>&lt;scope&gt;</code> attribute is used in header cells (<code>&lt;th&gt;</code>) to define whether the header applies to a row or column.</p>
+        
+        <table border="1">
+            <caption>Accessible Table Example</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Product</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Quantity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">Apples</th>
+                    <td>$1.00</td>
+                    <td>50</td>
+                </tr>
+                <tr>
+                    <th scope="row">Bananas</th>
+                    <td>$0.50</td>
+                    <td>100</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Your Name. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HTML5 Practice for Chapter 5">
+    <meta name="author" content="Your Name">
+    <title>HTML5 Practice - Chapter 5: Images & Media</title>
+</head>
+<body>
+
+    <header>
+        <h1>HTML5 Practice - Chapter 5: Images & Media</h1>
+        <p>This practice demonstrates the use of images and media-related elements in HTML5, covering all the tags discussed in Chapter 5.</p>
+    </header>
+
+    <section>
+        <h2>Image Element (<img>)</h2>
+        <p>The <code>&lt;img&gt;</code> tag is used to embed images into an HTML document. It requires the <code>src</code> attribute to specify the image URL and the <code>alt</code> attribute for alternative text.</p>
+        <img src="https://via.placeholder.com/400x200" alt="Sample Image" width="400" height="200">
+    </section>
+
+    <section>
+        <h2>Image with Map (<map> and <area>)</h2>
+        <p>You can create clickable areas on an image using the <code>&lt;map&gt;</code> and <code>&lt;area&gt;</code> tags. The <code>usemap</code> attribute of the <code>&lt;img&gt;</code> tag is used to reference the map.</p>
+        <img src="https://via.placeholder.com/400x200" alt="Image with Map" usemap="#imagemap" width="400" height="200">
+        <map name="imagemap">
+            <area shape="rect" coords="50,50,150,150" href="https://www.example.com" alt="Rectangle Area">
+            <area shape="circle" coords="200,100,50" href="https://www.example.com/circle" alt="Circle Area">
+        </map>
+    </section>
+
+    <section>
+        <h2>Figure and Caption (<figure> and <figcaption>)</h2>
+        <p>The <code>&lt;figure&gt;</code> element is used to group media content such as images, diagrams, or illustrations, along with an optional <code>&lt;figcaption&gt;</code> element for a caption.</p>
+        <figure>
+            <img src="https://via.placeholder.com/300x200" alt="A Placeholder Image">
+            <figcaption>This is a placeholder image with a caption.</figcaption>
+        </figure>
+    </section>
+
+    <section>
+        <h2>Audio Element (<audio>)</h2>
+        <p>The <code>&lt;audio&gt;</code> tag is used to embed audio content. It can contain multiple <code>&lt;source&gt;</code> elements for different formats, ensuring compatibility across browsers.</p>
+        <audio controls>
+            <source src="audio-sample.mp3" type="audio/mpeg">
+            <source src="audio-sample.ogg" type="audio/ogg">
+            Your browser does not support the audio element.
+        </audio>
+    </section>
+
+    <section>
+        <h2>Video Element (<video>)</h2>
+        <p>The <code>&lt;video&gt;</code> tag is used to embed video content. Like the <code>&lt;audio&gt;</code> tag, it can contain multiple <code>&lt;source&gt;</code> elements for different formats.</p>
+        <video controls width="400">
+            <source src="video-sample.mp4" type="video/mp4">
+            <source src="video-sample.ogg" type="video/ogg">
+            Your browser does not support the video element.
+        </video>
+    </section>
+
+    <section>
+        <h2>Picture Element (<picture> and <source>)</h2>
+        <p>The <code>&lt;picture&gt;</code> element is used for responsive images, allowing different image sources for different screen sizes or resolutions. The <code>&lt;source&gt;</code> element is used inside the <code>&lt;picture&gt;</code> tag to specify multiple image formats or media conditions.</p>
+        <picture>
+            <source media="(min-width: 800px)" srcset="https://via.placeholder.com/800x400">
+            <source media="(min-width: 400px)" srcset="https://via.placeholder.com/400x200">
+            <img src="https://via.placeholder.com/300x150" alt="Responsive Image Example" width="300" height="150">
+        </picture>
+    </section>
+
+    <section>
+        <h2>Scalable Vector Graphics (SVG)</h2>
+        <p>The <code>&lt;svg&gt;</code> element is used to define vector-based graphics in XML format. SVG is scalable and resolution-independent, making it ideal for web use.</p>
+        <svg width="100" height="100">
+            <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+        </svg>
+    </section>
+
+    <section>
+        <h2>Track Element (<track>)</h2>
+        <p>The <code>&lt;track&gt;</code> element is used to define text tracks for media elements like <code>&lt;video&gt;</code> and <code>&lt;audio&gt;</code>. These can be subtitles, captions, or descriptions.</p>
+        <video controls width="400">
+            <source src="video-sample.mp4" type="video/mp4">
+            <track src="subtitles_en.vtt" kind="subtitles" srclang="en" label="English">
+            <track src="subtitles_es.vtt" kind="subtitles" srclang="es" label="Spanish">
+            Your browser does not support the video element.
+        </video>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Your Name. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

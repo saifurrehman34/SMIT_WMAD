@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HTML5 Practice for Chapter 7">
+    <meta name="author" content="Your Name">
+    <title>HTML5 Practice - Chapter 7: Forms</title>
+</head>
+<body>
+
+    <header>
+        <h1>HTML5 Practice - Chapter 7: Forms</h1>
+        <p>This practice demonstrates the use of forms in HTML5, covering all the form-related tags discussed in Chapter 7.</p>
+    </header>
+
+    <section>
+        <h2>Basic Form Structure</h2>
+        <p>A form is created using the <code>&lt;form&gt;</code> tag. You can add different types of input fields such as text fields, radio buttons, checkboxes, dropdowns, and more.</p>
+        
+        <form action="/submit" method="post">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="fname">First Name:</label>
+                <input type="text" id="fname" name="fname" placeholder="John" required><br><br>
+                
+                <label for="lname">Last Name:</label>
+                <input type="text" id="lname" name="lname" placeholder="Doe" required><br><br>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="john@example.com" required><br><br>
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required><br><br>
+                
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required><br><br>
+                
+                <label for="color">Favorite Color:</label>
+                <input type="color" id="color" name="color" value="#0000ff"><br><br>
+                
+                <label for="range">Satisfaction Level:</label>
+                <input type="range" id="range" name="range" min="0" max="10" value="5">
+            </fieldset>
+            <br>
+            
+            <fieldset>
+                <legend>Gender</legend>
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label for="male">Male</label><br>
+                
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label><br>
+                
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other">Other</label>
+            </fieldset>
+            <br>
+            
+            <fieldset>
+                <legend>Preferences</legend>
+                <label for="news">Subscribe to newsletter:</label>
+                <input type="checkbox" id="news" name="news"><br><br>
+
+                <label for="updates">Receive updates:</label>
+                <input type="checkbox" id="updates" name="updates"><br><br>
+
+                <label for="agreement">I agree to the terms and conditions:</label>
+                <input type="checkbox" id="agreement" name="agreement" required>
+            </fieldset>
+            <br>
+
+            <fieldset>
+                <legend>Comments and Feedback</legend>
+                <label for="feedback">Feedback:</label><br>
+                <textarea id="feedback" name="feedback" rows="4" cols="50" placeholder="Enter your comments here..."></textarea><br><br>
+
+                <label for="file">Upload a file:</label>
+                <input type="file" id="file" name="file">
+            </fieldset>
+            <br>
+
+            <fieldset>
+                <legend>Country Selection</legend>
+                <label for="country">Choose your country:</label>
+                <select id="country" name="country">
+                    <optgroup label="North America">
+                        <option value="usa">USA</option>
+                        <option value="canada">Canada</option>
+                    </optgroup>
+                    <optgroup label="Europe">
+                        <option value="uk">United Kingdom</option>
+                        <option value="germany">Germany</option>
+                    </optgroup>
+                </select>
+            </fieldset>
+            <br>
+
+            <fieldset>
+                <legend>Submit Your Information</legend>
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </fieldset>
+        </form>
+    </section>
+
+    <section>
+        <h2>Form Output</h2>
+        <p>The <code>&lt;output&gt;</code> tag can be used to display the result of a calculation or any operation in the form.</p>
+        
+        <form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+            <label for="a">Enter a number (A):</label>
+            <input type="number" id="a" name="a" value="0">
+            <br><br>
+            <label for="b">Enter a number (B):</label>
+            <input type="number" id="b" name="b" value="0">
+            <br><br>
+            <label for="result">Result (A + B):</label>
+            <output name="result" for="a b">0</output>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Your Name. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

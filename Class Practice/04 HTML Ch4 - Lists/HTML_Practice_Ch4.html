@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HTML5 Practice for Chapter 4">
+    <meta name="author" content="Your Name">
+    <title>HTML5 Practice - Chapter 4: Lists</title>
+</head>
+<body>
+
+    <header>
+        <h1>HTML5 Practice - Chapter 4: Lists</h1>
+        <p>This practice demonstrates the use of lists in HTML5, covering all the list-related tags discussed in Chapter 4.</p>
+    </header>
+
+    <section>
+        <h2>Ordered List (<ol>)</h2>
+        <p>An ordered list creates a numbered list of items. You can customize the numbering style using the <code>type</code> attribute (e.g., numbers, letters, Roman numerals).</p>
+        <ol type="1">
+            <li>First item</li>
+            <li>Second item</li>
+            <li>Third item</li>
+        </ol>
+
+        <h3>Ordered List with Letters</h3>
+        <ol type="A">
+            <li>First item (A)</li>
+            <li>Second item (B)</li>
+            <li>Third item (C)</li>
+        </ol>
+        
+        <h3>Ordered List with Roman Numerals</h3>
+        <ol type="I">
+            <li>First item (I)</li>
+            <li>Second item (II)</li>
+            <li>Third item (III)</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>Unordered List (<ul>)</h2>
+        <p>An unordered list creates a bulleted list of items. The <code>type</code> attribute can be used to change the bullet style.</p>
+        <ul>
+            <li>First item with default bullet</li>
+            <li>Second item with default bullet</li>
+            <li>Third item with default bullet</li>
+        </ul>
+
+        <h3>Unordered List with Square Bullets</h3>
+        <ul style="list-style-type: square;">
+            <li>First item (square)</li>
+            <li>Second item (square)</li>
+            <li>Third item (square)</li>
+        </ul>
+
+        <h3>Unordered List with Circle Bullets</h3>
+        <ul style="list-style-type: circle;">
+            <li>First item (circle)</li>
+            <li>Second item (circle)</li>
+            <li>Third item (circle)</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Description List (<dl>, <dt>, <dd>)</h2>
+        <p>A description list is used to define terms and their descriptions. The <code>&lt;dt&gt;</code> tag defines the term, and the <code>&lt;dd&gt;</code> tag defines the description.</p>
+        <dl>
+            <dt>HTML</dt>
+            <dd>HyperText Markup Language</dd>
+            <dt>CSS</dt>
+            <dd>Cascading Style Sheets</dd>
+            <dt>JavaScript</dt>
+            <dd>A programming language used to create interactive effects within web browsers.</dd>
+        </dl>
+    </section>
+
+    <section>
+        <h2>Nested Lists</h2>
+        <p>You can also nest lists inside other lists to create a hierarchical structure.</p>
+
+        <h3>Nested Ordered and Unordered Lists</h3>
+        <ol>
+            <li>First item
+                <ul>
+                    <li>Subitem 1</li>
+                    <li>Subitem 2</li>
+                </ul>
+            </li>
+            <li>Second item
+                <ul>
+                    <li>Subitem 1</li>
+                    <li>Subitem 2</li>
+                </ul>
+            </li>
+            <li>Third item
+                <ul>
+                    <li>Subitem 1</li>
+                    <li>Subitem 2</li>
+                </ul>
+            </li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>Multilevel Nested Lists</h2>
+        <p>You can nest multiple levels of lists within each other.</p>
+        <ol>
+            <li>First item
+                <ul>
+                    <li>Subitem 1
+                        <ul>
+                            <li>Sub-subitem 1</li>
+                            <li>Sub-subitem 2</li>
+                        </ul>
+                    </li>
+                    <li>Subitem 2</li>
+                </ul>
+            </li>
+            <li>Second item
+                <ul>
+                    <li>Subitem 1
+                        <ul>
+                            <li>Sub-subitem 1</li>
+                            <li>Sub-subitem 2</li>
+                        </ul>
+                    </li>
+                    <li>Subitem 2</li>
+                </ul>
+            </li>
+        </ol>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Your Name. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HTML5 Practice for Chapter 8">
+    <meta name="author" content="Your Name">
+    <title>HTML5 Practice - Chapter 8: Structure & Extra Markup</title>
+</head>
+<body>
+
+    <header>
+        <h1>HTML5 Practice - Chapter 8: Structure & Extra Markup</h1>
+        <p>This practice demonstrates the use of structure and extra markup in HTML5, covering all the tags discussed in Chapter 8.</p>
+    </header>
+
+    <section>
+        <h2>Article Section (<article>)</h2>
+        <article>
+            <h3>Understanding HTML5 Structure</h3>
+            <p>HTML5 introduced new semantic elements such as <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, and <code>&lt;aside&gt;</code>. These elements make it easier to define the different parts of a web page and improve accessibility.</p>
+        </article>
+    </section>
+
+    <section>
+        <h2>Aside Section (<aside>)</h2>
+        <p>The <code>&lt;aside&gt;</code> element is used to define content that is related to the main content but is separate from it, such as a sidebar or related links.</p>
+        <aside>
+            <h3>Related Links</h3>
+            <ul>
+                <li><a href="https://www.example.com">Example Link 1</a></li>
+                <li><a href="https://www.example.com">Example Link 2</a></li>
+                <li><a href="https://www.example.com">Example Link 3</a></li>
+            </ul>
+        </aside>
+    </section>
+
+    <section>
+        <h2>Dialogs (<dialog>)</h2>
+        <p>HTML5 introduced the <code>&lt;dialog&gt;</code> element to represent a dialog box or modal window. The dialog can be shown or hidden using JavaScript.</p>
+        <dialog id="myDialog">
+            <p>This is a dialog box.</p>
+            <button id="closeDialog">Close</button>
+        </dialog>
+        <button id="showDialog">Show Dialog</button>
+
+        <script>
+            const dialog = document.getElementById('myDialog');
+            const showDialogButton = document.getElementById('showDialog');
+            const closeDialogButton = document.getElementById('closeDialog');
+
+            showDialogButton.addEventListener('click', () => dialog.showModal());
+            closeDialogButton.addEventListener('click', () => dialog.close());
+        </script>
+    </section>
+
+    <section>
+        <h2>Embedded Objects (<object>)</h2>
+        <p>The <code>&lt;object&gt;</code> element is used to embed external content like images, videos, and other media files into a webpage. You can also specify fallback content if the object cannot be displayed.</p>
+        <object data="https://example.com/sample.pdf" type="application/pdf" width="600" height="400">
+            <p>Your browser does not support the embedded object. You can <a href="https://example.com/sample.pdf">download the PDF here</a>.</p>
+        </object>
+    </section>
+
+    <section>
+        <h2>Progress and Meter Elements</h2>
+        
+        <h3>Progress Bar (<progress>)</h3>
+        <p>The <code>&lt;progress&gt;</code> element represents the completion progress of a task.</p>
+        <progress id="progressBar" value="70" max="100">70%</progress>
+
+        <h3>Meter Element (<meter>)</h3>
+        <p>The <code>&lt;meter&gt;</code> element represents a scalar measurement within a known range, such as a gauge or meter.</p>
+        <meter id="diskUsage" value="0.4" min="0" max="1">40%</meter>
+    </section>
+
+    <section>
+        <h2>Inline Frames (<iframe>)</h2>
+        <p>The <code>&lt;iframe&gt;</code> element is used to embed another HTML document within the current one. It is often used to display content like videos or other web pages.</p>
+        <iframe src="https://www.example.com" width="600" height="400" title="Example Website"></iframe>
+    </section>
+
+    <section>
+        <h2>Template Element (<template>)</h2>
+        <p>The <code>&lt;template&gt;</code> element is used to hold HTML content that is not rendered when the page loads, but can be instantiated later using JavaScript.</p>
+        <template id="myTemplate">
+            <p>This content is in a template and will be displayed when we trigger it using JavaScript.</p>
+        </template>
+        <button id="showTemplate">Show Template Content</button>
+        <div id="templateContainer"></div>
+
+        <script>
+            const template = document.getElementById('myTemplate');
+            const container = document.getElementById('templateContainer');
+            const button = document.getElementById('showTemplate');
+
+            button.addEventListener('click', () => {
+                const content = template.content.cloneNode(true);
+                container.appendChild(content);
+            });
+        </script>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Your Name. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
